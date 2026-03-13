@@ -5,6 +5,7 @@ import './App.css'
 import Users from './Users';
 import { Suspense } from 'react';
 import Friends from './Friends';
+import Players from './Players';
 
 
 
@@ -13,7 +14,7 @@ const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
 
 
 // another way
-const fetchFriends = async() => {
+const fetchFriends = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/users');
   return res.json();
 }
@@ -43,6 +44,10 @@ function App() {
     <>
 
       <h2>Vite + React</h2>
+
+
+
+      <Players></Players>
 
 
       <Suspense fallback={<h3>Loading...</h3>}>
